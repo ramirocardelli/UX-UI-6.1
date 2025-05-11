@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resumen del pedido</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    nav {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #666;
+      padding-bottom: 0.5rem;
+    }
+
+    nav a.active {
+      color: #000;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+    }
+
+    h2 {
+      margin-top: 1rem;
+    }
+
+    .description {
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    td:last-child {
+      text-align: right;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-confirm {
+      background-color: #6f46ff;
+      color: white;
+      margin-right: 0.5rem;
+    }
+
+    .btn-cancel {
+      background-color: #f0f0ff;
+      color: #6f46ff;
+    }
+
+    .icon-trash {
+      cursor: pointer;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="pedidos.html" class="active">Pedido</a>
+    <a href="facturas.html">Facturas</a>
+    <a href="facturas-todas.html">Facturas todas</a>
+  </nav>
+
+  <h2>Resumen del pedido</h2>
+  <p class="description">Revise los productos seleccionados antes de confirmar el pedido.</p>
+
+  <table>
+    <tr>
+      <td>🧪 Ácido clorhídrico</td>
+      <td>15 en stock</td>
+      <td>1 unidad</td>
+      <td><span class="icon-trash">🗑️</span></td>
+    </tr>
+    <tr>
+      <td>🧪 Hidróxido de sodio</td>
+      <td>2 en stock</td>
+      <td>2 unidades</td>
+      <td><span class="icon-trash">🗑️</span></td>
+    </tr>
+    <tr>
+      <td>🧪 Acetona</td>
+      <td>Sin stock</td>
+      <td>Pedido a proveedor</td>
+      <td><span class="icon-trash">🗑️</span></td>
+    </tr>
+    <tr>
+      <td>🧪 Ácido sulfúrico</td>
+      <td>8 en stock</td>
+      <td>1 unidad</td>
+      <td><span class="icon-trash">🗑️</span></td>
+    </tr>
+  </table>
+
+  <div>
+    <h4>Confirmar pedido</h4>
+    <button class="btn btn-confirm">Confirmar</button>
+    <button class="btn btn-cancel">Cancelar</button>
+  </div>
+
+</body>
+</html>

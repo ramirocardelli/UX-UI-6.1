@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Emitir Factura</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 40px;
+      color: #333;
+    }
+
+    nav {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #666;
+      padding-bottom: 0.5rem;
+    }
+
+    nav a.active {
+      color: #000;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px;
+    }
+
+    thead {
+      color: #666;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tfoot td {
+      font-weight: bold;
+      border-top: 1px solid #ddd;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .client-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .client-info img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #6c47ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #5736d1;
+    }
+
+    .gray-text {
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="pedidos.html">Pedido</a>
+    <a href="facturas.html" class="active">Facturas</a>
+    <a href="facturas-todas.html">Facturas todas</a>
+  </nav>
+
+  <!-- Resumen del pedido -->
+  <div class="section">
+    <h2>Resumen del pedido</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio unitario</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ácido clorhídrico</td>
+          <td>2</td>
+          <td>$2.500</td>
+          <td>$5.000</td>
+        </tr>
+        <tr>
+          <td>Ácido sulfúrico</td>
+          <td>1</td>
+          <td>$3.750</td>
+          <td>$3.750</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3"></td>
+          <td>$8.750</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- Datos del cliente -->
+  <div class="section">
+    <h2>Datos del cliente</h2>
+    <div class="client-info">
+      <img src="https://awards.acm.org/binaries/content/gallery/acm/awards/photo/t-w/tanenbaum_1309681" alt="Foto de perfil">
+      <div>
+        <span>Andrés Tenenbaum</span><br/>
+        <span class="gray-text">papi.andi@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detalles de facturación -->
+  <div class="section">
+    <h2>Detalles de facturación</h2>
+
+    <div class="input-group">
+      <label for="cuil">CUIL</label>
+      <input type="text" id="cuil" placeholder="Ingresa el CUIL">
+    </div>
+
+    <div class="input-group">
+      <label for="direccion">Dirección fiscal</label>
+      <input type="text" id="direccion" placeholder="Calle, número, ciudad">
+    </div>
+
+    <div class="input-group">
+      <label for="correo">Correo para factura</label>
+      <input type="email" id="correo" placeholder="ejemplo@correo.com">
+    </div>
+
+    <button>Emitir factura</button>
+  </div>
+
+</body>
+</html>

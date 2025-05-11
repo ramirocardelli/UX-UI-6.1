@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Seleccionar cliente</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    nav {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #666;
+      padding-bottom: 0.5rem;
+    }
+
+    nav a.active {
+      color: #000;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+    }
+
+    h2 {
+      margin-top: 1rem;
+    }
+
+    .description {
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-box {
+      background-color: #f9f9f9;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 400px;
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 100%;
+    }
+
+    .client-list {
+      max-width: 500px;
+    }
+
+    .client-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+
+    .client-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .client-info img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .client-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .client-text span:first-child {
+      font-weight: bold;
+    }
+
+    .client-text span:last-child {
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    .new-client-icon {
+      background-color: #eee6ff;
+      padding: 6px;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .arrow {
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html" class="active">Clientes</a>
+    <a href="pedidos.html">Pedido</a>
+    <a href="facturas.html">Facturas</a>
+    <a href="facturas-todas.html">Facturas todas</a>
+  </nav>
+
+  <h2>Seleccionar cliente</h2>
+  <p class="description">Elija el cliente para asociar el pedido.</p>
+
+  <div class="search-box">
+    <input type="text" placeholder="Nombre, email o teléfono">
+    🔍
+  </div>
+
+  <div class="client-list">
+
+    <div class="client-item">
+      <div class="client-info">
+        <img src="https://i.blogs.es/7c0ad8/torvadls1/650_1200.jpg" alt="Linus">
+        <div class="client-text">
+          <span>Leandro Torombolo</span>
+          <span>lean.t@gmail.com</span>
+        </div>
+      </div>
+      <span class="arrow">›</span>
+    </div>
+
+    <div class="client-item">
+      <div class="client-info">
+        <img src="https://awards.acm.org/binaries/content/gallery/acm/awards/photo/t-w/tanenbaum_1309681" alt="Andrew">
+        <div class="client-text">
+          <span>Andrés Tenenbaum</span>
+          <span>papi.andi@gmail.com</span>
+        </div>
+      </div>
+      <span class="arrow">›</span>
+    </div>
+
+    <div class="client-item">
+      <div class="client-info">
+        <img src="https://lastfm.freetls.fastly.net/i/u/ar0/14ec8954f8924e97b087837b3a870b5c.jpg" alt="Richard">
+        <div class="client-text">
+          <span>Ricardo Stalin</span>
+          <span>ricardo.stalin@gmail.com</span>
+        </div>
+      </div>
+      <span class="arrow">›</span>
+    </div>
+
+    <div class="client-item">
+      <div class="client-info">
+        <div class="new-client-icon">➕</div>
+        <div class="client-text">
+          <span>Nuevo cliente</span>
+          <span>Registrar nuevo cliente</span>
+        </div>
+      </div>
+      <span class="arrow">›</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
